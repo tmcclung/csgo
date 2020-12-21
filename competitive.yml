@@ -1,7 +1,10 @@
 version: '3'
 services:
   competitive:
-    image: csgo
+    image: csgo:latest
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     ports:
       - "27016:27015"
       - "27016:27015/udp"
